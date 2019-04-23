@@ -15,5 +15,17 @@ public class TestClient {
 
 		Client client1 = new Client(25, "Doe", "John", adresseC1);
 		Client client2 = new Client(12, "Stark", "Arya", adresseC2);
+
+		client1.setPrenom("Julie");
+		client1.setNom("De La Vigne");
+
+		client2.setPrenom("Boris");
+		client2.setNom("Dupape");
+
+		client1.displayNomEtPrenom();
+		client2.displayNomEtPrenom();
+
+		System.out.println("Pour le client 1, nom et prénom : " + client1.getNom() + ", " + client1.getPrenom());
+		System.out.println("Pour le client 2, nom et prénom : " + client2.getNom() + ", " + client2.getPrenom());
 	}
 }

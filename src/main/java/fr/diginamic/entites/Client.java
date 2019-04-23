@@ -36,4 +36,33 @@ public class Client {
 		System.out.println("Informations qui ont valorisé les variables d'instance : ");
 		System.out.println(numeroCompte + ", " + nom + ", " + prenom + ", " + adresse);
 	}
+
+	public void displayNomEtPrenom() {
+		System.out.println(this.nom.toUpperCase() + ", " + this.prenom);
+	}
+
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+
+	public void setPrenom(String prenom) {
+		this.prenom = prenom;
+	}
+
+	public void setNumeroCompte(int numeroCompte) {
+		this.numeroCompte = numeroCompte;
+	}
+
+	public String getPrenom() {
+		return this.prenom;
+	}
+
+	public String getNom() {
+		return this.nom;
+	}
+
+	public int getNumeroCompte() {
+		return this.numeroCompte;
+	}
+
 }
