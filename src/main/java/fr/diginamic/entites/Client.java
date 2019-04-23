@@ -9,6 +9,11 @@ public class Client {
 	String nom;
 	String prenom;
 
+	/**
+	 * @param numeroCompte
+	 * @param nom
+	 * @param prenom
+	 */
 	public Client(int numeroCompte, String nom, String prenom) {
 		System.out.println("Nouvelle instance créée");
 		this.numeroCompte = numeroCompte;
