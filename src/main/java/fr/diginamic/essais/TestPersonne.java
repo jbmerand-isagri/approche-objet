@@ -31,8 +31,8 @@ public class TestPersonne {
 		// personne2.adresse.codePostal = 59740;
 		// personne2.adresse.ville = "Troie";
 
-		System.out.println(personne1);
-		System.out.println(personne2);
+		System.out.println(personne1.toString());
+		System.out.println(personne2.toString());
 	}
 
 }

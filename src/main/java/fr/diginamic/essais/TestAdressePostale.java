@@ -13,8 +13,9 @@ public class TestAdressePostale {
 
 		AdressePostale adresse2 = new AdressePostale(2, "avenue des Lotus", 15230, "Ghorin");
 
-		System.out.println(adresse1);
-		System.out.println(adresse2);
+		System.out.println(adresse1.toString());
+		System.out.println(adresse2.toString());
+
 	}
 
 }

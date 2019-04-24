@@ -65,4 +65,9 @@ public class AdressePostale {
 		this.ville = ville;
 	}
 
+	@Override
+	public String toString() {
+		return numeroDeRue + " " + libelleRue + " " + codePostal + " " + ville;
+	}
+
 }

@@ -35,4 +35,9 @@ public class Personne {
 		this.adresse = adresse;
 	}
 
+	@Override
+	public String toString() {
+		return nom + " " + prenom + "; habitant au : " + adresse;
+	}
+
 }
