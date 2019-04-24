@@ -5,7 +5,7 @@ package fr.diginamic.entites;
  *
  */
 public class Cercle {
-	double rayon;
+	public double rayon;
 
 	/**
 	 * Constructeur
