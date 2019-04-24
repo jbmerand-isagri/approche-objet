@@ -5,7 +5,7 @@ package fr.diginamic.entites;
  *
  */
 public class Cercle {
-	public double rayon;
+	private double rayon;
 
 	/**
 	 * Constructeur
@@ -23,5 +23,13 @@ public class Cercle {
 
 	public double retourneSurface() {
 		return this.rayon * this.rayon * Math.PI;
+	}
+
+	public double getRayon() {
+		return this.rayon;
+	}
+
+	public void setRayon(double rayon) {
+		this.rayon = rayon;
 	}
 }

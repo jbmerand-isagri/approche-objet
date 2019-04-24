@@ -14,6 +14,6 @@ public class CercleService {
 	 */
 	public static void doubler(Cercle cercle) {
 		System.out.println("Méthode pour doubler le rayon lancée.");
-		cercle.rayon = 2 * cercle.rayon;
+		cercle.setRayon(2 * cercle.getRayon());
 	}
 }

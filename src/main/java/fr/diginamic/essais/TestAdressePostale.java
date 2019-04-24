@@ -9,19 +9,11 @@ import fr.diginamic.entites.AdressePostale;;
 public class TestAdressePostale {
 
 	public static void main(String[] args) {
-		AdressePostale adresse = new AdressePostale();
-		adresse.numeroDeRue = 14;
-		adresse.libelleRue = "rue des Acacias";
-		adresse.codePostal = 89350;
-		adresse.ville = "Trojhan";
-				
-		AdressePostale adresse2 = new AdressePostale();
-		adresse2.numeroDeRue = 2;
-		adresse2.libelleRue = "avenue des Lotus";
-		adresse2.codePostal = 15230;
-		adresse2.ville = "Ghorin";
-	
-		System.out.println(adresse);
+		AdressePostale adresse1 = new AdressePostale(14, "rue des Acacias", 89350, "Trojhan");
+
+		AdressePostale adresse2 = new AdressePostale(2, "avenue des Lotus", 15230, "Ghorin");
+
+		System.out.println(adresse1);
 		System.out.println(adresse2);
 	}
 

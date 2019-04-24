@@ -5,10 +5,10 @@ package fr.diginamic.entites;
  *
  */
 public class Client {
-	int numeroCompte;
-	String nom;
-	String prenom;
-	AdressePostale adresse;
+	private int numeroCompte;
+	private String nom;
+	private String prenom;
+	private AdressePostale adresse;
 
 	/**
 	 * @param numeroCompte
@@ -63,6 +63,14 @@ public class Client {
 
 	public int getNumeroCompte() {
 		return this.numeroCompte;
+	}
+
+	public AdressePostale getAdresse() {
+		return adresse;
+	}
+
+	public void setAdresse(AdressePostale adresse) {
+		this.adresse = adresse;
 	}
 
 }

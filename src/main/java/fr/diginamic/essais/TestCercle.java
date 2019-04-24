@@ -21,9 +21,9 @@ public class TestCercle {
 		// TP 3.3 pour PassageParReference
 		System.out.println("*** Tests sur le cercle 3 ***");
 		Cercle cercle3 = new Cercle(10);
-		System.out.println("Ancien rayon du cercle = " + cercle3.rayon);
+		System.out.println("Ancien rayon du cercle = " + cercle3.getRayon());
 		CercleService.doubler(cercle3);
-		System.out.println("Nouveau rayon du cercle = " + cercle3.rayon);
+		System.out.println("Nouveau rayon du cercle = " + cercle3.getRayon());
 	}
 
 }
