@@ -32,7 +32,7 @@ public class Pigiste extends Intervenant {
 	@Override
 	public void afficherDonnees() {
 		super.afficherDonnees();
-		System.out.println(", salaire = " + this.getSalaire() + " Statut : salarié");
+		System.out.println("salaire = " + this.getSalaire() + " Statut : pigiste");
 	}
 
 	/**

@@ -19,8 +19,9 @@ public class TestIntervenant {
 		Pigiste pigiste = new Pigiste(20, 100, "Doe", "Jane");
 		System.out.println("Salaire mensuel du pigiste = " + pigiste.getSalaire());
 
-		// test Salarie étape 2
-
+		// tests étape 2
+		salarie.afficherDonnees();
+		pigiste.afficherDonnees();
 	}
 
 }
