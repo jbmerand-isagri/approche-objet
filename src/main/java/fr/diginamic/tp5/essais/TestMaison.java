@@ -30,7 +30,7 @@ public class TestMaison {
 		maison.ajouterPiece(wc1).ajouterPiece(salleDeBain2).ajouterPiece(salleDeBain1).ajouterPiece(cuisine1)
 				.ajouterPiece(salon1).ajouterPiece(chambre3).ajouterPiece(chambre2).ajouterPiece(chambre1);
 		// test des méthodes de la maison
-		System.out.println("Superficie totale de la maison = " + maison.getSuperficieTotale());
+		System.out.println("Superficie totale de la maison = " + maison.calculerSurface());
 		System.out.println("Superficie du RDC = " + maison.getSuperficieParEtage(0));
 		System.out.println("Superficie 1er étage = " + maison.getSuperficieParEtage(1));
 		System.out.println("Superficie totale des chambres = " + maison.getSuperficieParTypePiece("chambre"));

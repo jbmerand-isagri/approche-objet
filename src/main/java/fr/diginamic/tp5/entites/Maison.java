@@ -1,12 +1,14 @@
 package fr.diginamic.tp5.entites;
 
+import fr.diginamic.tp6.entites.ISurface;
+
 /**
  * Classe principale de l'exercice, Maison
  * 
  * @author Jean-Baptiste
  *
  */
-public class Maison {
+public class Maison implements ISurface {
 	private Piece[] pieces = new Piece[0];
 
 	/**
@@ -30,7 +32,8 @@ public class Maison {
 	 * 
 	 * @return double superficie
 	 */
-	public double getSuperficieTotale() {
+	@Override
+	public double calculerSurface() {
 		double superficieTotale = 0;
 		for (Piece piece : pieces) {
 			superficieTotale += piece.getSuperficie();

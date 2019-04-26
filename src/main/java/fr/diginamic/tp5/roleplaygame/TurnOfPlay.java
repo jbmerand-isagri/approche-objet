@@ -42,18 +42,18 @@ public class TurnOfPlay {
 			// calcule de l'attaque du personnage et de la créature
 			double characterAttack = Game.getCharacter().getAttackValue();
 			double creatureAttack = creature.getAttackValue();
-			// character plus rapide
+			// si character plus rapide
 			if (characterAttack > creatureAttack) {
 				double damages = characterAttack - creatureAttack;
 				System.out.println(Game.getCharacter().getName() + " est plus rapide. Il inflige " + damages + " à "
 						+ creature.getName());
 				creature.setLife(creature.getLife() - damages);
 				System.out.println("Il lui reste " + creature.getLife() + " PV.");
-				// creature plus rapide
+				// si creature plus rapide
 			} else if (characterAttack == creatureAttack) {
 				System.out.println("La créature évite votre coups.");
 				continue;
-				// égalité
+				// si égalité de vitesse
 			} else {
 				double damages = creatureAttack - characterAttack;
 				System.out.println(creature.getName() + " est plus rapide. Il inflige " + damages + " à "
@@ -62,7 +62,7 @@ public class TurnOfPlay {
 				System.out.println(
 						"Il reste " + Game.getCharacter().getLife() + " PV à " + Game.getCharacter().getName());
 			}
-			// fin du combat à la mort d'un des deux protagonistes
+			// fin du combat, à la mort d'un des deux protagonistes
 			if (creature.getLife() <= 0) {
 				Game.getCharacter().setScore(Game.getCharacter().getScore() + points);
 				System.out.println("VICTOIRE !!! Vous avez gagné le combat ! Votre score est maintenant de "
