@@ -1,7 +1,8 @@
-package tp7.listes;
+package fr.diginamic.tp7.listes.essais;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Iterator;
 
 /**
  * Tests sur les listes de String
@@ -12,23 +13,31 @@ import java.util.Arrays;
 public class TestListeString {
 
 	public static void main(String[] args) {
-		ArrayList<String> stringList = new ArrayList();
+		ArrayList<String> stringList = new ArrayList<>();
 		stringList
 				.addAll(Arrays.asList("Nice", "Carcassonne", "Narbonne", "Lyon", "Foix", "Pau", "Marseille", "Tarbes"));
 
 		int numberOfLetter = Integer.MIN_VALUE;
-		int indexOfLongerWord = 0;
+		String cityWithLongerName = "";
 		for (int i = 0; i < stringList.size(); i++) {
 			if (stringList.get(i).length() > numberOfLetter) {
 				numberOfLetter = stringList.get(i).length();
-				indexOfLongerWord = i;
+				cityWithLongerName = stringList.get(i);
 			}
 			stringList.set(i, stringList.get(i).toUpperCase());
 		}
-		System.out.println("La ville qui a le nom le plus grand est : " + stringList.get(indexOfLongerWord));
-		System.out.println(stringList);
-		// TODO : EXO2 supprimez de la liste les villes dont le nom commence par la
-		// lettre N.
+
+		Iterator<String> iterator = stringList.iterator();
+		while (iterator.hasNext()) {
+			String city = iterator.next();
+			if (city.charAt(0) == 'N') {
+				iterator.remove();
+			}
+
+		}
+
+		System.out.println("La ville qui a le nom le plus grand est : " + cityWithLongerName);
+		System.out.println("Liste après les différentes manipulations : " + stringList);
 	}
 
 }

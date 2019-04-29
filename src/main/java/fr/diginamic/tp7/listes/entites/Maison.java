@@ -1,28 +1,26 @@
-package fr.diginamic.tp5.entites;
+package fr.diginamic.tp7.listes.entites;
 
-import fr.diginamic.tp6.entites.ISurface;
+import java.util.ArrayList;
 
 /**
- * Classe principale de l'exercice, Maison
+ * Classe principale de l'exercice, Maison, avec ArrayList
  * 
  * @author Jean-Baptiste
  *
  */
 public class Maison implements ISurface {
-	private Piece[] pieces = new Piece[0];
+	// private Piece[] pieces = new Piece[0];
+
+	private ArrayList<Piece> pieces = new ArrayList<>();
 
 	/**
-	 * Ajout d'une pièce à la maison (méthode fluide)
+	 * Ajoute une pièce à la maison (liste)
 	 * 
+	 * @param piece
 	 * @return
 	 */
 	public Maison ajouterPiece(Piece piece) {
-		Piece[] piecesTemp = new Piece[pieces.length + 1];
-		for (int i = 0; i < pieces.length; i++) {
-			piecesTemp[i] = pieces[i];
-		}
-		piecesTemp[piecesTemp.length - 1] = piece;
-		this.pieces = piecesTemp;
+		pieces.add(piece);
 		System.out.println("pièce ajoutée");
 		return this;
 	}
@@ -66,10 +64,6 @@ public class Maison implements ISurface {
 	public double getSuperficieParTypePiece(String type) {
 		double superficieTypePieces = 0;
 		for (Piece piece : pieces) {
-			// Autre possibilité, ne nécessitant pas les attributs
-			// if (piece.getClass().getSimpleName().equals(type)) {
-			// superficieTypePieces += piece.getSuperficie();
-			// }
 			if (piece.getType().equalsIgnoreCase(type)) {
 				superficieTypePieces += piece.getSuperficie();
 			}

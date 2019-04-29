@@ -1,4 +1,4 @@
-package tp7.listes;
+package fr.diginamic.tp7.listes.essais;
 
 import java.util.ArrayList;
 import java.util.Iterator;
