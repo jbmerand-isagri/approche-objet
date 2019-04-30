@@ -48,8 +48,8 @@ public class TestMapPays {
 		int minHab = Integer.MAX_VALUE;
 		String paysMinHab = "";
 
-		for (Iterator iterator = mapPays.keySet().iterator(); iterator.hasNext();) {
-			String clePays = (String) iterator.next();
+		for (Iterator<String> iterator = mapPays.keySet().iterator(); iterator.hasNext();) {
+			String clePays = iterator.next();
 			int nbHabitants = mapPays.get(clePays).getNbHabitants();
 			if (nbHabitants < minHab) {
 				minHab = nbHabitants;
