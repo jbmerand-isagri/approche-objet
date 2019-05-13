@@ -17,6 +17,10 @@ public class Maison implements ISurface {
 	 * @return
 	 */
 	public Maison ajouterPiece(Piece piece) {
+		if (piece == null) {
+			System.out.println("Err : pièce non ajoutée");
+			return this;
+		}
 		Piece[] piecesTemp = new Piece[pieces.length + 1];
 		for (int i = 0; i < pieces.length; i++) {
 			piecesTemp[i] = pieces[i];
